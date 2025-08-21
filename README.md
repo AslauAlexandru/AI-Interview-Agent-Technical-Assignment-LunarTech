@@ -2,31 +2,51 @@
 
 ## Architecture
 
-The system operates in a continuous loop:
-**User Speaks** 
--> **Microphone** 
--> **Speech-to-Text (Whisper)** 
--> **Text Input** 
--> **LLM Core (OpenAI GPT-3.5)** 
--> **Text Response** 
--> **Text-to-Speech (ElevenLabs)** 
--> **Speaker**
--> **User Listens**
+The system operates in this order:
 
-- **LLM Core**: Managed by an `InterviewAgent` class in Python. It handles the conversation flow, state, prompt engineering, and summarization.
+- **User Speaks** 
+
+- **Microphone** 
+
+- **Speech-to-Text (Whisper)** 
+
+- **Text Input** 
+
+- **LLM Core (OpenAI GPT-3.5)** 
+
+- **Text Response** 
+
+- **Text-to-Speech (ElevenLabs)** 
+
+- **Speaker**
+
+- **User Listens**
+
+
+
+- **LLM Core**: The `InterviewAgent` class in Python. The class contain these methods: the conversation flow, state, prompt engineering, and summarization.
 - **Voice I/O**: `speech_recognition` library captures microphone input, and the `elevenlabs` client provides natural-sounding speech output.
-- **Data Logging**: The entire interaction, including a final JSON summary, is saved to a timestamped file in a `logs/` directory.
+- **Data Logging**: The entire interaction, including a final JSON summary, is saved to a timestamped file in a `logs/` directory. 
 
 ## Setup Instructions
 
-### Step 1: Clone the Repository
-If this were a Git repo, you'd clone it. For now, just create a directory named `lunartech-ai-interviewer` and place the provided files inside.
 
-### Step 2: Install Dependencies
-Make sure you have Python 3.9+ installed. Then, install the required libraries from `requirements.txt`.
+You can do these steps if you don't want to use Google Colab and Jupyter Notebook, these steps are for VS Code, Github Condespaces:
+
+
+### Step 1: Clone the Repository
+If this were a Git repo, you'd clone it.
 
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/AslauAlexandru/AI-Interview-Agent-Technical-Assignment-LunarTech
+```
+
+### Step 2: Install Dependencies
+To create using ```requirements_pip_freeze.txt``` you need to use ```pip freeze > requirements_pip_freeze.txt```. 
+Make sure you have Python installed. Then, install the required libraries from `requirements_pip_freeze.txt` .
+
+```bash
+pip install -r requirements_pip_freeze.txt
 ```
 **Note for Audio:** The `PyAudio` library may require system-level dependencies.
 - On macOS: `brew install portaudio`
