@@ -24,9 +24,12 @@ The system operates in this order:
 
 
 
-- **LLM Core**: The `InterviewAgent` class in Python. The class contain these methods: the conversation flow, state, prompt engineering, and summarization.
-- **Voice I/O**: `speech_recognition` library captures microphone input, and the `elevenlabs` client provides natural-sounding speech output.
-- **Data Logging**: The entire interaction, including a final JSON summary, is saved to a timestamped file in a `logs/` directory. 
+
+**LLM Core**: The `InterviewAgent` class in Python. The class contain these methods: the conversation flow, state, prompt engineering, and summarization.
+
+**Voice I/O**: `speech_recognition` library captures microphone input, and the `elevenlabs` client provides natural-sounding speech output.
+
+**Data Logging**: The entire interaction, including a final JSON summary, is saved to a timestamped file in a `logs/` directory. 
 
 ## Setup Instructions
 
