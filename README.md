@@ -12,7 +12,7 @@ The system operates in this order:
 
 - **Text Input** 
 
-- **LLM Core (OpenAI GPT-3.5)** 
+- **LLM Core (Gemini through OpenAI or OpenAI Gemini)** 
 
 - **Text Response** 
 
