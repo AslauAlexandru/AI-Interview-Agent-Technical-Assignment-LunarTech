@@ -45,8 +45,8 @@ git clone https://github.com/AslauAlexandru/AI-Interview-Agent-Technical-Assignm
 ```
 
 ### Step 2: Install Dependencies
-To create using ```requirements_pip_freeze.txt``` you need to use ```pip freeze > requirements_pip_freeze.txt```. 
-Make sure you have Python installed. Then, install the required libraries from `requirements_pip_freeze.txt` .
+To create ```requirements_pip_freeze.txt``` you need to use ```pip freeze > requirements_pip_freeze.txt```. 
+Make sure you have Python installed. Then, install the required libraries from `requirements_pip_freeze.txt`.
 
 ```bash
 pip install -r requirements_pip_freeze.txt
